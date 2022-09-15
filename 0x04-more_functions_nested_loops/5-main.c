@@ -8,5 +8,5 @@
 int main(void)
 {
 	more_numbers();
-	return (1);
+	return (0);
 }
