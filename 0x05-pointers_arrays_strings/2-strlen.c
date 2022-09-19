@@ -4,14 +4,14 @@
 * _strlen - function that returns the length of a string.
 * @s: The character to be checked.
 *
-* Return:
+* Return: i (the length of the string)
 */
 
 int _strlen(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++);
+	for (i = 0; s[i] != '\0'; i++)
 
 	return (i);
 }
