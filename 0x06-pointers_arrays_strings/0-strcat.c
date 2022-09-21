@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* puts_half - function that prints half of a string, followed by a new line.
+* _strcat - function that pthat concatenates two strings.
 * @dest: The string to be printed.
 * @src: The string to be printed.
 *
