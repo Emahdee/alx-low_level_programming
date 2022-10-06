@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * array_range - function that creates an array of integers
+ * _realloc - reallocates a memory block using malloc and free
  *
  * @ptr: void pointer
  * @old_size: allocated space for ptr
@@ -19,13 +19,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size == old_size)
 		return (ptr);
-
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-
 	if (ptr == NULL)
 	{
 		ptr = malloc(new_size * sizeof(void *));
@@ -33,14 +31,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (NULL);
 		return (ptr);
 	}
-
 	a = malloc(new_size * sizeof(char));
-
 	if (a == NULL)
 		return (NULL);
 
 	i = 0;
-
 	if (new_size > old_size)
 	{
 		while (i < old_size)
@@ -51,14 +46,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (a);
 	}
-
-	/* if new_size < old_size */
 	while (i < new_size)
 	{
 		a[i] = ((char *)ptr)[i];
 		i++;
 	}
-
 	free(ptr);
 	return (a);
 }
